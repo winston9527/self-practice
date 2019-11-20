@@ -19,6 +19,7 @@ import javax.persistence.NamedEntityGraph;
 import javax.persistence.NamedEntityGraphs;
 import javax.persistence.NamedSubgraph;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -53,4 +54,10 @@ public class UserEntity {
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "userEntity", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<AccountEntity> accountEntities;
+
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private PetEntity petEntities;
+
 }

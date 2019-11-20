@@ -52,11 +52,16 @@ public class UserTest {
 
             System.err.println("=============");
             System.err.println(userEntity);
-            userEntity.getAccountEntities()
-              .forEach(s->{
-                  System.err.println("账户："+s);
-                  System.err.println(s.getAccountDetailEntities());
-              });
+            System.err.println("宠物"+userEntity.getPetEntities());
+//            userEntity.getPetEntities()
+//              .forEach(s->{
+//                  System.err.println("宠物："+s);
+//              });
+//            userEntity.getAccountEntities()
+//              .forEach(s->{
+//                  System.err.println("账户："+s);
+//                  System.err.println(s.getAccountDetailEntities());
+//              });
         });
     }
 

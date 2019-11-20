@@ -13,6 +13,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     List<UserEntity> findAll();*/
 
     @Override
-    @EntityGraph(value = "user.accountEntities2", type = EntityGraph.EntityGraphType.LOAD)
+    @EntityGraph(value = "user.accountEntities2", type = EntityGraph.EntityGraphType.FETCH)
     List<UserEntity> findAll();
 }

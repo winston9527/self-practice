@@ -39,6 +39,6 @@ public class AccountEntity {
     private UserEntity userEntity;
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "accountEntity")
+    @OneToMany(mappedBy = "accountEntity",fetch=FetchType.LAZY)
     private Set<AccountDetailEntity> accountDetailEntities;
 }
