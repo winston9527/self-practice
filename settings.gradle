@@ -1,2 +1,2 @@
 rootProject.name = 'self-practice'
-include ('spring-data-jpa')
+include ('spring-data-jpa','hibernate-test')

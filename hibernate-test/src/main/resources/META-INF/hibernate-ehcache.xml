@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hibernate creates caches named after the fully qualified name of Domain Objects -->
+<!-- For Collections, Hibernate creates collection caches named after the fully qualified name of the
+Domain Object followed by "." followed by the collection field name. -->
+<ehcache>
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="5"
+            timeToLiveSeconds="10"
+            overflowToDisk="false"
+            memoryStoreEvictionPolicy="LRU"
+            />
+    <cache
+            name="hibernate.cache.com.active.services.forms.Form"
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="20"
+            overflowToDisk="false"
+            />
+    <cache
+            name="hibernate.cache.com.active.services.forms.whitelabel.AgencyWhiteLabel"
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="20"
+            overflowToDisk="false"
+            />
+    <cache
+            name="hibernate.cache.com.active.services.forms.whitelabel.WhiteLabelListing"
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="20"
+            overflowToDisk="false"
+            />
+    <cache
+            name="hibernate.cache.com.active.services.forms.whitelabel.WhiteLabelImage"
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="20"
+            overflowToDisk="false"
+            />
+</ehcache>

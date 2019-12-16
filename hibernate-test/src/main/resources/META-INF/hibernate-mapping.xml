@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--学生-->
+	<class name="com.winston.practice.hibernate.entity.StudentEntity" table="students">
+		<id name="sid" column="sid">
+		</id>
+		<property name="name" column="name" />
+		<!--学生的全部课程-->
+		<set name="courses" table="students_courses" lazy="false"
+			  cascade="save-update,merge,persist">
+			<key column="sid" not-null="true" />
+			<many-to-many class="com.winston.practice.hibernate.entity.CourseEntity" column="cid" />
+		</set>
+		<!--必修课-->
+		<set name="compulsoryCourses" table="compulsory_courses" lazy="false" fetch="subselect" cascade="all,delete-orphan,merge">
+			<key column="sid" not-null="true" />
+			<element column="cid" type="long" not-null="true" />
+		</set>
+	</class>
+
+	<!--课程-->
+	<class name="com.winston.practice.hibernate.entity.CourseEntity" table="course">
+		<id name="cid" column="cid"/>
+		<property name="name" column="name"  />
+	</class>
+
+</hibernate-mapping>
