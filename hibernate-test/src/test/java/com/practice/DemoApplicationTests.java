@@ -45,10 +45,10 @@ class DemoApplicationTests {
 		.build();
 
 		StudentEntity xiaoming = StudentEntity.builder()
-		.sid(199L)
-		.name("xiaoming")
+		.sid(9922L)
+		.name("zhuzhu")
 		.courses(Sets.newHashSet(coursecEntity))
-		.compulsoryCourses(Sets.newHashSet(200L))
+		.compulsoryCourses(Sets.newHashSet(300L))
 		.build();
 
 		getCurrentSession().merge(xiaoming);

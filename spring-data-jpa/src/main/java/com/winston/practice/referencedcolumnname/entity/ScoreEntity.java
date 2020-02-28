@@ -30,7 +30,7 @@ public class ScoreEntity implements Serializable {
     private String course;
     private BigDecimal score;
     @OneToOne
-    @JoinColumn(name="student_no",referencedColumnName="student_no")
+    @JoinColumn(name="studentNo",referencedColumnName="studentNo")
     private StudentEntity studentEntity;
 
 }
